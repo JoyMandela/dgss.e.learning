@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DGSS.E-Learning</title>
+  <link id="theme" rel="stylesheet" href="light-theme.css"> <!-- Default to light theme -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    /* Custom Styles */
+    .sidebar {
+      background-color: #673ab7; /* Deep Purple */
+      color: #fff;
+      width: 250px; /* Set sidebar width */
+    }
+    .sidebar .nav-link {
+      color: #fff;
+    }
+    .sidebar .nav-link:hover {
+      background-color: #512da8; /* Darker Deep Purple on hover */
+    }
+    .content {
+      padding: 20px;
+    }
+    /* Styled toggle button */
+    .toggle-btn {
+      background-color: #673ab7; /* Deep Purple */
+      border: none;
+      color: #fff;
+      font-size: 20px;
+      padding: 10px 15px;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 999;
+      border-radius: 50%;
+    }
+    .toggle-btn:hover {
+      background-color: #512da8; /* Darker Deep Purple on hover */
+    }
+    .search-bar {
+      margin-bottom: 20px;
+    }
+
+    /* Cover Page Header Style */
+    .cover-header {
+      background-color: #2196F3; /* Material Blue */
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+    }
+     /* Gallery container */
+     .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 10px;
+        padding: 10px;
+    }
+
+    /* Gallery item */
+    .gallery-item {
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Gallery image */
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.3s ease;
+    }
+
+    /* Hover effect */
+    .gallery-item:hover img {
+        transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row">
+    <nav class="col-md-3 col-lg-2 d-md-block sidebar">
+      <div class="sidebar-sticky">
+        <a href="../../../../index.html"><!-- Facebook Logo -->
+        <div class="text-center mt-3">
+          <img src="https://scontent.fadd1-1.fna.fbcdn.net/v/t39.30808-6/299999870_479271280876758_3200814093373782244_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=eBKdbCmaZtQAX9mGRjg&_nc_ht=scontent.fadd1-1.fna&oh=00_AfCzH8LG6xb4o9brCjtip7vB703yRMP5tNVEoMIpwrRrYw&oe=65FFCFF1" alt="Facebook Logo" style="width: 80px;">
+        </div></a>
+        <!-- Sidebar Title -->
+        <h5 class="text-center mt-3 mb-4"><u>DGSS.E-Learning</u></h5> <!-- Sidebar Title -->
+        <!-- Search bar -->
+        <form class="search-bar">
+          <div class="input-group">
+            <input type="text" class="form-control" id="searchInput" placeholder="Search...">
+            <div class="input-group-append">
+              <button class="btn btn-outline-light" type="button" onclick="filterAccordion()"><i class="fas fa-search"></i></button>
+            </div>
+          </div>
+        </form>
+        <!-- End of Search bar -->
+        <ul class="nav flex-column" id="accordion">
+          <li class="nav-item">
+            <a class="nav-link" href="#submenu1" data-toggle="collapse" aria-expanded="false">
+              <i class="fas fa-book"></i> Books
+            </a>
+            <ul class="collapse list-unstyled" id="submenu1">
+              
+
+                <a class="nav-link" href="#submenu1_1" data-toggle="collapse" aria-expanded="false">
+                  Grade 9 >>
+                </a>
+                <ul class="collapse list-unstyled" id="submenu1_1">
+                  <li><a class="nav-link" href="grade9 book.html">-StudentTB</a></li>
+                  <li><a class="nav-link" href="#">-TeacherG</a></li>
+                  <li><a class="nav-link" href="#">-Reference</a></li>
+                </ul>
+              </li>
+
+              <a class="nav-link" href="#submenu1_2" data-toggle="collapse" aria-expanded="false">
+                Grade 10 >>
+              </a>
+              <ul class="collapse list-unstyled" id="submenu1_2">
+                <li><a class="nav-link" href="#">-StudentTB</a></li>
+                  <li><a class="nav-link" href="#">-TeacherG</a></li>
+                  <li><a class="nav-link" href="#">-Reference</a></li>
+              </ul>
+            </li>
+
+            <a class="nav-link" href="#submenu1_3" data-toggle="collapse" aria-expanded="false">
+              Grade 11 >>
+            </a>
+            <ul class="collapse list-unstyled" id="submenu3_3">
+              <li><a class="nav-link" href="#">-StudentTB</a></li>
+              <li><a class="nav-link" href="#">-TeacherG</a></li>
+              <li><a class="nav-link" href="#">-Reference</a></li>
+            </ul>
+          </li>
+
+          <a class="nav-link" href="#submenu1_4" data-toggle="collapse" aria-expanded="false">
+            Grade 12 >>
+          </a>
+          <ul class="collapse list-unstyled" id="submenu3_4">
+            <li><a class="nav-link" href="#">-StudentTB</a></li>
+            <li><a class="nav-link" href="#">-TeacherG</a></li>
+            <li><a class="nav-link" href="#">-Reference</a></li>
+          </ul>
+        </li>
+
+        
+
+
+
+            </ul>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link" href="#submenu2" data-toggle="collapse" aria-expanded="false">
+              <i class="fas fa-video"></i> V.Tutorial
+            </a>
+            <ul class="collapse list-unstyled" id="submenu2">
+              
+              <li>
+                <a class="nav-link" href="#submenu2_1" data-toggle="collapse" aria-expanded="false">
+                 <b> -Grade 9 >> </b>
+                </a>
+                <ul class="collapse list-unstyled" id="submenu2_1">
+                  <li><a class="nav-link" href="#">Affan-Oromo</a></li>
+                  <li><a class="nav-link" href="#">Amharic</a></li>
+                  <li><a class="nav-link" href="#">English</a></li>
+                  <li><a class="nav-link" href="#">Mathematics</a></li>
+                  <li><a class="nav-link" href="#">Physics</a></li>
+                  <li><a class="nav-link" href="#">Chemistry</a></li>
+                  <li><a class="nav-link" href="#">Biology</a></li>
+                  <li><a class="nav-link" href="#">Economics</a></li>
+                  <li><a class="nav-link" href="#">Geography</a></li>
+                  <li><a class="nav-link" href="#">Citizenship</a></li>
+                  <li><a class="nav-link" href="#">IT</a></li>
+                  <li><a class="nav-link" href="#">HPE</a></li>
+                  <li><a class="nav-link" href="#">History</a></li>
+                 
+                </ul>
+              </li>
+
+              <li>
+                <a class="nav-link" href="#submenu2_1_1" data-toggle="collapse" aria-expanded="false">
+                 <b> -Grade 10 >></b>
+                </a>
+                <ul class="collapse list-unstyled" id="submenu2_1_1">
+                  <li><a class="nav-link" href="#">Affan-Oromo</a></li>
+                  <li><a class="nav-link" href="#">Amharic</a></li>
+                  <li><a class="nav-link" href="#">English</a></li>
+                  <li><a class="nav-link" href="#">Mathematics</a></li>
+                  <li><a class="nav-link" href="#">Physics</a></li>
+                  <li><a class="nav-link" href="#">Chemistry</a></li>
+                  <li><a class="nav-link" href="#">Biology</a></li>
+                  <li><a class="nav-link" href="#">Economics</a></li>
+                  <li><a class="nav-link" href="#">Geography</a></li>
+                  <li><a class="nav-link" href="#">Citizenship</a></li>
+                  <li><a class="nav-link" href="#">IT</a></li>
+                  <li><a class="nav-link" href="#">HPE</a></li>
+                  <li><a class="nav-link" href="#">History</a></li>
+                 
+                </ul>
+              </li>
+              <li>
+                <a class="nav-link" href="#submenu2_1_2" data-toggle="collapse" aria-expanded="false">
+                 <b> -Grade 11 >></b>
+                </a>
+                <ul class="collapse list-unstyled" id="submenu2_1_2">
+                  <li><a class="nav-link" href="#">Affan-Oromo</a></li>
+                  <li><a class="nav-link" href="#">Amharic</a></li>
+                  <li><a class="nav-link" href="#">English</a></li>
+                  <li><a class="nav-link" href="#">Mathematics</a></li>
+                  <li><a class="nav-link" href="#">Physics</a></li>
+                  <li><a class="nav-link" href="#">Chemistry</a></li>
+                  <li><a class="nav-link" href="#">Biology</a></li>
+                  <li><a class="nav-link" href="#">Economics</a></li>
+                  <li><a class="nav-link" href="#">Geography</a></li>
+                  <li><a class="nav-link" href="#">Citizenship</a></li>
+                  <li><a class="nav-link" href="#">IT</a></li>
+                  <li><a class="nav-link" href="#">HPE</a></li>
+                  <li><a class="nav-link" href="#">History</a></li>
+                 
+                </ul>
+              </li>
+
+              <li>
+                <a class="nav-link" href="#submenu2_1_3" data-toggle="collapse" aria-expanded="false">
+                 <b> -Grade 12 >></b>
+                </a>
+                <ul class="collapse list-unstyled" id="submenu2_1_3">
+                  <li><a class="nav-link" href="#">Affan-Oromo</a></li>
+                  <li><a class="nav-link" href="#">Amharic</a></li>
+                  <li><a class="nav-link" href="#">English</a></li>
+                  <li><a class="nav-link" href="#">Mathematics</a></li>
+                  <li><a class="nav-link" href="#">Physics</a></li>
+                  <li><a class="nav-link" href="#">Chemistry</a></li>
+                  <li><a class="nav-link" href="#">Biology</a></li>
+                  <li><a class="nav-link" href="#">Economics</a></li>
+                  <li><a class="nav-link" href="#">Geography</a></li>
+                  <li><a class="nav-link" href="#">Citizenship</a></li>
+                  <li><a class="nav-link" href="#">IT</a></li>
+                  <li><a class="nav-link" href="#">HPE</a></li>
+                  <li><a class="nav-link" href="#">History</a></li>
+                 
+                </ul>
+              </li>
+
+            </ul>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="#submenu3" data-toggle="collapse" aria-expanded="false">
+              <i class="fas fa-flask"></i> Virtual Labs
+            </a>
+            <ul class="collapse list-unstyled" id="submenu3">
+              
+
+                <a class="nav-link" href="#submenu3_1" data-toggle="collapse" aria-expanded="false">
+                  Mathematics >>
+                </a>
+                <ul class="collapse list-unstyled" id="submenu3_1">
+                  <li><a class="nav-link" href="#">-Algebra</a></li>
+                  <li><a class="nav-link" href="#">-Polgone</a></li>
+                </ul>
+              </li>
+
+              <a class="nav-link" href="#submenu3_2" data-toggle="collapse" aria-expanded="false">
+                Physics >>
+              </a>
+              <ul class="collapse list-unstyled" id="submenu3_2">
+                <li><a class="nav-link" href="#">-Algebra</a></li>
+                <li><a class="nav-link" href="#">-Polgone</a></li>
+              </ul>
+            </li>
+
+            <a class="nav-link" href="#submenu3_3" data-toggle="collapse" aria-expanded="false">
+              Chemistry >>
+            </a>
+            <ul class="collapse list-unstyled" id="submenu3_3">
+              <li><a class="nav-link" href="#">-Algebra</a></li>
+              <li><a class="nav-link" href="#">-Polgone</a></li>
+            </ul>
+          </li>
+
+          <a class="nav-link" href="#submenu3_4" data-toggle="collapse" aria-expanded="false">
+            Earth-Science >>
+          </a>
+          <ul class="collapse list-unstyled" id="submenu3_4">
+            <li><a class="nav-link" href="#">-Algebra</a></li>
+            <li><a class="nav-link" href="#">-Polgone</a></li>
+          </ul>
+        </li>
+
+        
+
+
+
+            </ul>
+          </li>
+
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="#submenu4" data-toggle="collapse" aria-expanded="false">
+              <i class="fas fa-flask"></i> Basic-Skill
+            </a>
+            <ul class="collapse list-unstyled" id="submenu4">
+              
+
+                <a class="nav-link" href="#submenu4_1" data-toggle="collapse" aria-expanded="false">
+                  Computer-Skill >>
+                </a>
+                <ul class="collapse list-unstyled" id="submenu4_1">
+                  <li><a class="nav-link" href="#">-Basic Computer Skill</a></li>
+                  <li><a class="nav-link" href="#">-Coding</a></li>
+                  <li><a class="nav-link" href="#">-Video Editing</a></li>
+                </ul>
+              </li>
+
+              <a class="nav-link" href="#submenu4_2" data-toggle="collapse" aria-expanded="false">
+                English >>
+              </a>
+              <ul class="collapse list-unstyled" id="submenu4_2">
+                <li><a class="nav-link" href="#">-Grammer</a></li>
+                <li><a class="nav-link" href="#">-Vocabulary</a></li>
+                <li><a class="nav-link" href="#">-Spoken</a></li>
+                <li><a class="nav-link" href="#">-Writing</a></li>
+                <li><a class="nav-link" href="#">-Podcasting</a></li>
+              </ul>
+            </li>
+
+            <a class="nav-link" href="#submenu4_3" data-toggle="collapse" aria-expanded="false">
+              Self Development >>
+            </a>
+            <ul class="collapse list-unstyled" id="submenu4_3">
+              <li><a class="nav-link" href="#">-Sport</a></li>
+              <li><a class="nav-link" href="#">-Darwing</a></li>
+              <li><a class="nav-link" href="#">-VideoBooks</a></li>
+            </ul>
+          </li>
+
+               
+
+
+
+            </ul>
+          </li>
+
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </nav>
+
+
+
+    <main role="main" class="col-md-9 col-lg-10 px-md-4">
+      <div class="content">
+        <div class="cover-page">
+          <div class="cover-header">
+            <h1><u>Welcome to Our School E-Learning System </u></h1>
+            <h3>DILACHIN GENERAL SECONDARY SCHOOL</h3>
+            <!-- Add any other content for the cover page here -->
+          </div>
+        </div>
+        <div class="gallery">
+            <div class="gallery-item">
+               <a href=""> <img src="../units/Slide1.PNG" alt="Image 1"></a>
+            </div>
+            <div class="gallery-item">
+              <a href=""> <img src="../units/Slide2.PNG" alt="Image 2"></a>
+            </div>
+            <div class="gallery-item">
+              <a href=""> <img src="../units/Slide3.PNG" alt="Image 3"></a>
+            </div>
+            <div class="gallery-item">
+              <a href=""> <img src="../units/Slide4.PNG" alt="Image 4"></a>
+            </div>
+            <div class="gallery-item">
+              <a href=""> <img src="../units/Slide5.PNG" alt="Image 5"></a>
+            </div>
+            <div class="gallery-item">
+              <a href=""> <img src="../units/Slide6.PNG" alt="Image 6"></a>
+            </div>
+            <div class="gallery-item">
+              <a href=""> <img src="../units/Slide7.PNG" alt="Image 7"></a>
+            </div>
+            <div class="gallery-item">
+              <a href=""> <img src="../units/Slide7.PNG" alt="Image 8"></a>
+            </div>
+            <div class="gallery-item">
+              <a href=""> <img src="../units/Slide8.PNG" alt="Image 9"></a>
+            </div>
+            <div class="gallery-item">
+              <a href=""> <img src="../units/Slide9.PNG" alt="Image 10"></a>
+            </div>
+            <div class="gallery-item">
+              <a href=""> <img src="../units/Slide10.PNG" alt="Image 11"></a>
+            </div>
+            <div class="gallery-item">
+              <a href=""> <img src="../units/Slide11.PNG" alt="Image 12"></a>
+            </div>
+            <div class="gallery-item">
+              <a href=""> <img src="../units/Slide12.PNG" alt="Image 13"></a>
+            </div>
+        </div>
+      </div>
+    </main>
+    <!-- Styled toggle button -->
+    <button class="toggle-btn d-md-none" type="button" data-toggle="collapse" data-target=".sidebar">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+</div>
+<footer class="footer text-center bg-dark text-light py-3">
+    <div class="container">
+      <span>© 2024/2016EC dgss.e-learning</span>
+    </div>
+  </footer>
+  
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+  // JavaScript for night and light mode toggle
+  function toggleTheme() {
+    var theme = document.getElementById('theme');
+    if (theme.getAttribute('href') === 'light-theme.css') {
+      theme.setAttribute('href', 'dark-theme.css');
+    } else {
+      theme.setAttribute('href', 'light-theme.css');
+    }
+  }
+
+  // JavaScript for filtering accordion items
+  function filterAccordion() {
+    var input = document.getElementById('searchInput').value.toLowerCase();
+    var items = document.querySelectorAll('#accordion .nav-item');
+
+    items.forEach(function(item) {
+      var text = item.textContent.toLowerCase();
+      var collapse = item.querySelector('.collapse');
+      if (text.indexOf(input) !== -1) {
+        item.style.display = 'block';
+        if (collapse) {
+          collapse.classList.add('show');
+        }
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  }
+</script>
+
+  
+</body>
+</html>

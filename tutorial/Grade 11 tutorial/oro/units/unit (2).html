@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DGSS.E-Learning</title>
+  <link id="theme" rel="stylesheet" href="light-theme.css"> <!-- Default to light theme -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    /* Custom Styles */
+    .sidebar {
+      background-color: #673ab7; /* Deep Purple */
+      color: #fff;
+      width: 250px; /* Set sidebar width */
+    }
+    .sidebar .nav-link {
+      color: #fff;
+    }
+    .sidebar .nav-link:hover {
+      background-color: #512da8; /* Darker Deep Purple on hover */
+    }
+    .content {
+      padding: 20px;
+    }
+    /* Styled toggle button */
+    .toggle-btn {
+      background-color: #673ab7; /* Deep Purple */
+      border: none;
+      color: #fff;
+      font-size: 20px;
+      padding: 10px 15px;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 999;
+      border-radius: 50%;
+    }
+    .toggle-btn:hover {
+      background-color: #512da8; /* Darker Deep Purple on hover */
+    }
+    .search-bar {
+      margin-bottom: 20px;
+    }
+
+    /* Cover Page Header Style */
+    .cover-header {
+      background-color: #2196F3; /* Material Blue */
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+    }
+     /* Gallery container */
+     .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 10px;
+        padding: 10px;
+    }
+
+    /* Gallery item */
+    .gallery-item {
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Gallery image */
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.3s ease;
+    }
+
+    /* Hover effect */
+    .gallery-item:hover img {
+        transform: scale(1.05);
+    }
+     /* Style for the playlist widget container */
+     #playlist-widget {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: left;
+        }
+
+
+        /* Style for individual playlist items */
+        .playlist-item {
+            width: 300px; /* Adjust as needed */
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: left;
+        }
+main {
+            background-color: rgb(188, 190, 17); /* Light gray background color */
+        }
+
+        .playlist-item h3 {
+            margin-top: 0;
+        }
+
+        .playlist-item iframe {
+            width: 100%;
+            height: 200px; /* Adjust as needed */
+        }
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row">
+    <nav class="col-md-3 col-lg-2 d-md-block sidebar">
+      <div class="sidebar-sticky">
+        <a href="../../../../index.html"><!-- Facebook Logo -->
+        <div class="text-center mt-3">
+          <img src="../../../../Capture.PNG" alt="Facebook Logo" style="width: 80px;">
+        </div></a>
+        <!-- Sidebar Title -->
+        <h5 class="text-center mt-3 mb-4"><u>DGSS.E-Learning</u></h5> <!-- Sidebar Title -->
+        <!-- Search bar -->
+        <form class="search-bar">
+          <div class="input-group">
+            <input type="text" class="form-control" id="searchInput" placeholder="Search...">
+            <div class="input-group-append">
+              <button class="btn btn-outline-light" type="button" onclick="filterAccordion()"><i class="fas fa-search"></i></button>
+            </div>
+          </div>
+        </form>
+        <!-- End of Search bar -->
+        <ul class="nav flex-column" id="accordion">
+          <li class="nav-item">
+            <a class="nav-link" href="#submenu1" data-toggle="collapse" aria-expanded="false">
+              <i class="fas fa-book"></i> Books
+            </a>
+            <ul class="collapse list-unstyled" id="submenu1">
+              
+
+                <a class="nav-link" href="#submenu1_1" data-toggle="collapse" aria-expanded="false">
+                  Grade 9 >>
+                </a>
+                <ul class="collapse list-unstyled" id="submenu1_1">
+                  <li><a class="nav-link" href="grade9 book.html">-StudentTB</a></li>
+                  <li><a class="nav-link" href="grade9 TG book.html">-TeacherG</a></li>
+                  <li><a class="nav-link" href="grade9 refr book copy.html">-Reference</a></li>
+                </ul>
+              </li>
+
+              <a class="nav-link" href="#submenu1_2" data-toggle="collapse" aria-expanded="false">
+                Grade 10 >>
+              </a>
+              <ul class="collapse list-unstyled" id="submenu1_2">
+                <li><a class="nav-link" href="#">-StudentTB</a></li>
+                  <li><a class="nav-link" href="#">-TeacherG</a></li>
+                  <li><a class="nav-link" href="#">-Reference</a></li>
+              </ul>
+            </li>
+
+            <a class="nav-link" href="#submenu1_3" data-toggle="collapse" aria-expanded="false">
+              Grade 11 >>
+            </a>
+            <ul class="collapse list-unstyled" id="submenu1_3">
+              <li><a class="nav-link" href="#">-StudentTB</a></li>
+              <li><a class="nav-link" href="#">-TeacherG</a></li>
+              <li><a class="nav-link" href="#">-Reference</a></li>
+            </ul>
+          </li>
+
+          <a class="nav-link" href="#submenu1_4" data-toggle="collapse" aria-expanded="false">
+            Grade 12 >>
+          </a>
+          <ul class="collapse list-unstyled" id="submenu1_4">
+            <li><a class="nav-link" href="#">-StudentTB</a></li>
+            <li><a class="nav-link" href="#">-TeacherG</a></li>
+            <li><a class="nav-link" href="#">-Reference</a></li>
+          </ul>
+        </li>
+
+        
+
+
+
+            </ul>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link" href="#submenu2" data-toggle="collapse" aria-expanded="false">
+              <i class="fas fa-video"></i> V.Tutorial
+            </a>
+            <ul class="collapse list-unstyled" id="submenu2">
+              
+              <li>
+                <a class="nav-link" href="#submenu2_1" data-toggle="collapse" aria-expanded="false">
+                 <b> -Grade 9 >> </b>
+                </a>
+                <ul class="collapse list-unstyled" id="submenu2_1">
+                  <li><a class="nav-link" href="#">Affan-Oromo</a></li>
+                  <li><a class="nav-link" href="#">Amharic</a></li>
+                  <li><a class="nav-link" href="#">English</a></li>
+                  <li><a class="nav-link" href="#">Mathematics</a></li>
+                  <li><a class="nav-link" href="#">Physics</a></li>
+                  <li><a class="nav-link" href="#">Chemistry</a></li>
+                  <li><a class="nav-link" href="#">Biology</a></li>
+                  <li><a class="nav-link" href="#">Economics</a></li>
+                  <li><a class="nav-link" href="#">Geography</a></li>
+                  <li><a class="nav-link" href="#">Citizenship</a></li>
+                  <li><a class="nav-link" href="#">IT</a></li>
+                  <li><a class="nav-link" href="#">HPE</a></li>
+                  <li><a class="nav-link" href="#">History</a></li>
+                 
+                </ul>
+              </li>
+
+              <li>
+                <a class="nav-link" href="#submenu2_1_1" data-toggle="collapse" aria-expanded="false">
+                 <b> -Grade 10 >></b>
+                </a>
+                <ul class="collapse list-unstyled" id="submenu2_1_1">
+                  <li><a class="nav-link" href="#">Affan-Oromo</a></li>
+                  <li><a class="nav-link" href="#">Amharic</a></li>
+                  <li><a class="nav-link" href="#">English</a></li>
+                  <li><a class="nav-link" href="#">Mathematics</a></li>
+                  <li><a class="nav-link" href="#">Physics</a></li>
+                  <li><a class="nav-link" href="#">Chemistry</a></li>
+                  <li><a class="nav-link" href="#">Biology</a></li>
+                  <li><a class="nav-link" href="#">Economics</a></li>
+                  <li><a class="nav-link" href="#">Geography</a></li>
+                  <li><a class="nav-link" href="#">Citizenship</a></li>
+                  <li><a class="nav-link" href="#">IT</a></li>
+                  <li><a class="nav-link" href="#">HPE</a></li>
+                  <li><a class="nav-link" href="#">History</a></li>
+                 
+                </ul>
+              </li>
+              <li>
+                <a class="nav-link" href="#submenu2_1_2" data-toggle="collapse" aria-expanded="false">
+                 <b> -Grade 11 >></b>
+                </a>
+                <ul class="collapse list-unstyled" id="submenu2_1_2">
+                  <li><a class="nav-link" href="#">Affan-Oromo</a></li>
+                  <li><a class="nav-link" href="#">Amharic</a></li>
+                  <li><a class="nav-link" href="#">English</a></li>
+                  <li><a class="nav-link" href="#">Mathematics</a></li>
+                  <li><a class="nav-link" href="#">Physics</a></li>
+                  <li><a class="nav-link" href="#">Chemistry</a></li>
+                  <li><a class="nav-link" href="#">Biology</a></li>
+                  <li><a class="nav-link" href="#">Economics</a></li>
+                  <li><a class="nav-link" href="#">Geography</a></li>
+                  <li><a class="nav-link" href="#">Citizenship</a></li>
+                  <li><a class="nav-link" href="#">IT</a></li>
+                  <li><a class="nav-link" href="#">HPE</a></li>
+                  <li><a class="nav-link" href="#">History</a></li>
+                 
+                </ul>
+              </li>
+
+              <li>
+                <a class="nav-link" href="#submenu2_1_3" data-toggle="collapse" aria-expanded="false">
+                 <b> -Grade 12 >></b>
+                </a>
+                <ul class="collapse list-unstyled" id="submenu2_1_3">
+                  <li><a class="nav-link" href="#">Affan-Oromo</a></li>
+                  <li><a class="nav-link" href="#">Amharic</a></li>
+                  <li><a class="nav-link" href="#">English</a></li>
+                  <li><a class="nav-link" href="#">Mathematics</a></li>
+                  <li><a class="nav-link" href="#">Physics</a></li>
+                  <li><a class="nav-link" href="#">Chemistry</a></li>
+                  <li><a class="nav-link" href="#">Biology</a></li>
+                  <li><a class="nav-link" href="#">Economics</a></li>
+                  <li><a class="nav-link" href="#">Geography</a></li>
+                  <li><a class="nav-link" href="#">Citizenship</a></li>
+                  <li><a class="nav-link" href="#">IT</a></li>
+                  <li><a class="nav-link" href="#">HPE</a></li>
+                  <li><a class="nav-link" href="#">History</a></li>
+                 
+                </ul>
+              </li>
+
+            </ul>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="#submenu3" data-toggle="collapse" aria-expanded="false">
+              <i class="fas fa-flask"></i> Virtual Labs
+            </a>
+            <ul class="collapse list-unstyled" id="submenu3">
+              
+
+                <a class="nav-link" href="#submenu3_1" data-toggle="collapse" aria-expanded="false">
+                  Mathematics >>
+                </a>
+                <ul class="collapse list-unstyled" id="submenu3_1">
+                  <li><a class="nav-link" href="#">-Algebra</a></li>
+                  <li><a class="nav-link" href="#">-Polgone</a></li>
+                </ul>
+              </li>
+
+              <a class="nav-link" href="#submenu3_2" data-toggle="collapse" aria-expanded="false">
+                Physics >>
+              </a>
+              <ul class="collapse list-unstyled" id="submenu3_2">
+                <li><a class="nav-link" href="#">-Algebra</a></li>
+                <li><a class="nav-link" href="#">-Polgone</a></li>
+              </ul>
+            </li>
+
+            <a class="nav-link" href="#submenu3_3" data-toggle="collapse" aria-expanded="false">
+              Chemistry >>
+            </a>
+            <ul class="collapse list-unstyled" id="submenu3_3">
+              <li><a class="nav-link" href="#">-Algebra</a></li>
+              <li><a class="nav-link" href="#">-Polgone</a></li>
+            </ul>
+          </li>
+
+          <a class="nav-link" href="#submenu3_4" data-toggle="collapse" aria-expanded="false">
+            Earth-Science >>
+          </a>
+          <ul class="collapse list-unstyled" id="submenu3_4">
+            <li><a class="nav-link" href="#">-Algebra</a></li>
+            <li><a class="nav-link" href="#">-Polgone</a></li>
+          </ul>
+        </li>
+
+        
+
+
+
+            </ul>
+          </li>
+
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="#submenu4" data-toggle="collapse" aria-expanded="false">
+              <i class="fas fa-flask"></i> Basic-Skill
+            </a>
+            <ul class="collapse list-unstyled" id="submenu4">
+              
+
+                <a class="nav-link" href="#submenu4_1" data-toggle="collapse" aria-expanded="false">
+                  Computer-Skill >>
+                </a>
+                <ul class="collapse list-unstyled" id="submenu4_1">
+                  <li><a class="nav-link" href="#">-Basic Computer Skill</a></li>
+                  <li><a class="nav-link" href="#">-Coding</a></li>
+                  <li><a class="nav-link" href="#">-Video Editing</a></li>
+                </ul>
+              </li>
+
+              <a class="nav-link" href="#submenu4_2" data-toggle="collapse" aria-expanded="false">
+                English >>
+              </a>
+              <ul class="collapse list-unstyled" id="submenu4_2">
+                <li><a class="nav-link" href="#">-Grammer</a></li>
+                <li><a class="nav-link" href="#">-Vocabulary</a></li>
+                <li><a class="nav-link" href="#">-Spoken</a></li>
+                <li><a class="nav-link" href="#">-Writing</a></li>
+                <li><a class="nav-link" href="#">-Podcasting</a></li>
+              </ul>
+            </li>
+
+            <a class="nav-link" href="#submenu4_3" data-toggle="collapse" aria-expanded="false">
+              Self Development >>
+            </a>
+            <ul class="collapse list-unstyled" id="submenu4_3">
+              <li><a class="nav-link" href="#">-Sport</a></li>
+              <li><a class="nav-link" href="#">-Darwing</a></li>
+              <li><a class="nav-link" href="#">-VideoBooks</a></li>
+            </ul>
+          </li>
+
+               
+
+
+
+            </ul>
+          </li>
+
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </nav>
+
+
+
+    <main role="main" class="col-md-9 col-lg-10 px-md-4">
+      <div class="content">
+        <div class="cover-page">
+          <div class="cover-header">
+            <h1><u>Welcome to Our School E-Learning System </u></h1>
+            <h3>DILACHIN GENERAL SECONDARY SCHOOL</h3>
+            <!-- Add any other content for the cover page here -->
+          </div>
+        </div>
+       <!-- Cover Page -->
+
+
+
+
+       <div id="playlist-widget">
+        <!-- Video titles and players will be inserted here -->
+    </div>
+
+    <!-- Load the YouTube IFrame Player API -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+    <script>
+        // Replace 'YOUR_YOUTUBE_API_KEY' with your actual YouTube API key
+        const apiKey = 'AIzaSyBRrZ5DSxLZhrvBIko5ND7mJD14N55ROII';
+
+        // Replace 'YOUR_PLAYLIST_ID' with the ID of your YouTube playlist
+        const playlistId = 'PLiBv3RZ71pIg5Z7kF5PRy3RvnAEicPtXP';
+
+        // Function to fetch playlist data from YouTube API
+        function fetchPlaylist() {
+            fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=${playlistId}&key=${apiKey}`)
+                .then(response => response.json())
+                .then(data => {
+                    const playlistItems = data.items;
+                    playlistItems.forEach(item => {
+                        const videoId = item.snippet.resourceId.videoId;
+                        const videoTitle = item.snippet.title;
+                        const videoPlayer = `
+                            <div class="playlist-item">
+                                <h3>${videoTitle}</h3>
+                                <iframe src="https://www.youtube.com/embed/${videoId}" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        `;
+                        document.getElementById('playlist-widget').innerHTML += videoPlayer;
+                    });
+                })
+                .catch(error => console.error('Error fetching playlist:', error));
+        }
+
+        // Call the fetchPlaylist function when the page loads
+        window.onload = fetchPlaylist;
+    </script>
+
+
+<div style="clear:both"></div></div></div>  </div>
+<div class="textstyle2">
+
+</div></div><span class="textstyle7"><br/><br/></span><div id="container_6183a16b"><div id="container_6183a16b_padding" ><div class="textstyle2"><div id="container_2f8bac54"><div id="container_2f8bac54_padding" ><div class="textstyle2"><img src="rc_images/slide_10.png" id="img_54e21063" alt="" title="" />
+</div>
+<div style="clear:both"></div></div></div><div id="container_1345c514"><div id="container_1345c514_padding" ><div class="textstyle2"><img src="rc_images/slide1.jpg" id="img_6dfb3e84" alt="" title="" />
+</div>
+<div style="clear:both"></div></div></div><div id="container_35b176d9"><div id="container_35b176d9_padding" ><div class="textstyle2"><img src="rc_images/slide2.jpg" id="img_6491e4cb" alt="" title="" />
+</div>
+<div style="clear:both"></div></div></div><div id="container_537ca46"><div id="container_537ca46_padding" ><div class="textstyle2"><img src="rc_images/slide3.jpg" id="img_777a3ca0" alt="" title="" />
+</div>
+<div style="clear:both"></div></div></div><div id="container_5e4ed946"><div id="container_5e4ed946_padding" ><div class="textstyle2"><img src="rc_images/slide4.jpg" id="img_527cd7ee" alt="" title="" />
+</div>
+<div style="clear:both"></div></div></div><div id="container_67682b71"><div id="container_67682b71_padding" ><div class="textstyle2"><img src="rc_images/slide5.jpg" id="img_2ca654cf" alt="" title="" />
+</div>
+<div style="clear:both"></div></div></div><div id="container_3716852e"><div id="container_3716852e_padding" ><div class="textstyle2"><div id="container_67ebdd00"><div id="container_67ebdd00_padding" ><div class="textstyle2"><img src="rc_images/slide6.png" id="img_7d2a762c" alt="" title="" />
+</div>
+<div style="clear:both"></div></div></div><div id="container_2d975726"><div id="container_2d975726_padding" ><div class="textstyle2"><img src="rc_images/slide8.jpg" id="img_1fef8e7" alt="" title="" />
+</div>
+<div style="clear:both"></div></div></div><div id="container_4493700"><div id="container_4493700_padding" ><div class="textstyle2"><img src="rc_images/slide9.jpg" id="img_44a636d6" alt="" title="" />
+</div>
+<div style="clear:both"></div></div></div><div id="container_5e3721c3"><div id="container_5e3721c3_padding" ><div class="textstyle2"><img src="rc_images/slide10.jpg" id="img_4974338" alt="" title="" />
+</div>
+<div style="clear:both"></div></div></div><div id="container_53d0d90c"><div id="container_53d0d90c_padding" ><div class="textstyle2"><img src="rc_images/slide11.jpg" id="img_3bae2c7b" alt="" title="" />
+</div>
+<div style="clear:both"></div></div></div><div id="container_2a3efc7a"><div id="container_2a3efc7a_padding" ><div class="textstyle2"><img src="rc_images/slide12.jpg" id="img_61be6478" alt="" title="" />
+</div>
+
+</div></div>  </div>
+
+
+
+
+
+
+        </div>
+      </div>
+    </main>
+    <!-- Styled toggle button -->
+    <button class="toggle-btn d-md-none" type="button" data-toggle="collapse" data-target=".sidebar">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+</div>
+<footer class="footer text-center bg-dark text-light py-3">
+    <div class="container">
+      <span>© 2024/2016EC dgss.e-learning</span>
+    </div>
+  </footer>
+  
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+  // JavaScript for night and light mode toggle
+  function toggleTheme() {
+    var theme = document.getElementById('theme');
+    if (theme.getAttribute('href') === 'light-theme.css') {
+      theme.setAttribute('href', 'dark-theme.css');
+    } else {
+      theme.setAttribute('href', 'light-theme.css');
+    }
+  }
+
+  // JavaScript for filtering accordion items
+  function filterAccordion() {
+    var input = document.getElementById('searchInput').value.toLowerCase();
+    var items = document.querySelectorAll('#accordion .nav-item');
+
+    items.forEach(function(item) {
+      var text = item.textContent.toLowerCase();
+      var collapse = item.querySelector('.collapse');
+      if (text.indexOf(input) !== -1) {
+        item.style.display = 'block';
+        if (collapse) {
+          collapse.classList.add('show');
+        }
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  }
+</script>
+
+  
+</body>
+</html>

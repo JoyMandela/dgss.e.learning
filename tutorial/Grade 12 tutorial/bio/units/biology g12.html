@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DGSS.E-Learning</title>
+  <link id="theme" rel="stylesheet" href="light-theme.css"> <!-- Default to light theme -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    /* Custom Styles */
+    .sidebar {
+      background-color: #673ab7; /* Deep Purple */
+      color: #fff;
+      width: 250px; /* Set sidebar width */
+    }
+    .sidebar .nav-link {
+      color: #fff;
+    }
+    .sidebar .nav-link:hover {
+      background-color: #512da8; /* Darker Deep Purple on hover */
+    }
+    .content {
+      padding: 20px;
+    }
+    /* Styled toggle button */
+    .toggle-btn {
+      background-color: #673ab7; /* Deep Purple */
+      border: none;
+      color: #fff;
+      font-size: 20px;
+      padding: 10px 15px;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 999;
+      border-radius: 50%;
+    }
+    .toggle-btn:hover {
+      background-color: #512da8; /* Darker Deep Purple on hover */
+    }
+    .search-bar {
+      margin-bottom: 20px;
+    }
+
+    /* Cover Page Header Style */
+    .cover-header {
+      background-color: #2196F3; /* Material Blue */
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+    }
+     /* Gallery container */
+     .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 10px;
+        padding: 10px;
+    }
+
+    /* Gallery item */
+    .gallery-item {
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Gallery image */
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.3s ease;
+    }
+
+    /* Hover effect */
+    .gallery-item:hover img {
+        transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="col-md-3 col-lg-2 d-md-block sidebar">
+        <div class="sidebar-sticky">
+          <a href="../../../../home.html"><!-- Facebook Logo -->
+          <div class="text-center mt-3">
+            <img src="../../../../imagesB/dgsslogo.jpg" alt="dgss.logo" style="width: 80px;">
+          </div></a>
+          <!-- Sidebar Title -->
+          <h5 class="text-center mt-3 mb-4">DGSS.E-Learning</h5> <!-- Sidebar Title -->
+          <!-- Search bar -->
+          <form class="search-bar">
+            <div class="input-group">
+              <input type="text" class="form-control" id="searchInput" placeholder="Search...">
+              <div class="input-group-append">
+                <button class="btn btn-outline-light" type="button" onclick="filterAccordion()"><i class="fas fa-search"></i></button>
+              </div>
+            </div>
+          </form>
+          <!-- End of Search bar -->
+          <ul class="nav flex-column" id="accordion">
+            <li class="nav-item">
+              <a class="nav-link" href="#submenu1" data-toggle="collapse" aria-expanded="false">
+                <i class="fas fa-book"></i> Books
+              </a>
+              <ul class="collapse list-unstyled" id="submenu1">
+                
+  
+                  <a class="nav-link" href="#submenu1_1" data-toggle="collapse" aria-expanded="false">
+                    Grade 9 >>
+                  </a>
+                  <ul class="collapse list-unstyled" id="submenu1_1">
+                    <li><a class="nav-link" href="../../../../grade9 book.html">-StudentTB</a></li>
+                    <li><a class="nav-link" href="../../../../grade9 TG book.html">-TeacherG</a></li>
+                    <li><a class="nav-link" href="../../../../grade9 refr book copy.html">-Reference</a></li>
+                  </ul>
+                </li>
+  
+                <a class="nav-link" href="#submenu1_2" data-toggle="collapse" aria-expanded="false">
+                  Grade 10 >>
+                </a>
+                <ul class="collapse list-unstyled" id="submenu1_2">
+                  <li><a class="nav-link" href="../../../../Grade10 book.html">-StudentTB</a></li>
+                    <li><a class="nav-link" href="../../../../Grade10 TG book .html">-TeacherG</a></li>
+                    <li><a class="nav-link" href="../../../../Grade10 refr book copy.html">-Reference</a></li>
+                </ul>
+              </li>
+  
+              <a class="nav-link" href="#submenu1_3" data-toggle="collapse" aria-expanded="false">
+                Grade 11 >>
+              </a>
+              <ul class="collapse list-unstyled" id="submenu1_3">
+                <li><a class="nav-link" href="../../../../Grade11 book.html">-StudentTB</a></li>
+                <li><a class="nav-link" href="../../../../Grade11 TG book .html">-TeacherG</a></li>
+                <li><a class="nav-link" href="../../../../Grade11 refr book copy.html">-Reference</a></li>
+              </ul>
+            </li>
+  
+            <a class="nav-link" href="#submenu1_4" data-toggle="collapse" aria-expanded="false">
+              Grade 12 >>
+            </a>
+            <ul class="collapse list-unstyled" id="submenu1_4">
+              <li><a class="nav-link" href="../../../../Grade12 book.html">-StudentTB</a></li>
+              <li><a class="nav-link" href="../../../../Grade12 TG book .html">-TeacherG</a></li>
+              <li><a class="nav-link" href="../../../../Grade12 refr book copy.html">-Reference</a></li>
+            </ul>
+          </li>
+  
+          
+  
+  
+  
+              </ul>
+            </li>
+           
+            <li class="nav-item">
+              <a class="nav-link" href="#submenu2" data-toggle="collapse" aria-expanded="false">
+                <i class="fas fa-video"></i> V.Tutorial
+              </a>
+              <ul class="collapse list-unstyled" id="submenu2">
+                
+                <li>
+                  <a class="nav-link" href="#submenu2_1" data-toggle="collapse" aria-expanded="false">
+                   <b> -Grade 9 >> </b>
+                  </a>
+                  <ul class="collapse list-unstyled" id="submenu2_1">
+                    <li><a class="nav-link" href="../../../Grade 9 tutorial/Affan-oromo/units/affan oro.html">Affan-Oromo</a></li>
+                    <li><a class="nav-link" href="../../../Grade 9 tutorial/amharic/units/Amharic.html">Amharic</a></li>
+                    <li><a class="nav-link" href="../../../Grade 9 tutorial/english/units/english.html">English</a></li>
+                    <li><a class="nav-link" href="../../../Grade 9 tutorial/maths/units/maths.html">Mathematics</a></li>
+                    <li><a class="nav-link" href="../../../Grade 9 tutorial/physics/units/physics.html">Physics</a></li>
+                    <li><a class="nav-link" href="../../../Grade 9 tutorial/chemistry/units/chemistry.html">Chemistry</a></li>
+                    <li><a class="nav-link" href="../../../Grade 9 tutorial/biology/units/Biology.html">Biology</a></li>
+                    <li><a class="nav-link" href="../../../Grade 9 tutorial/eco/units/econ.html">Economics</a></li>
+                    <li><a class="nav-link" href="../../../Grade 9 tutorial/geo/units/geography.html">Geography</a></li>
+                    <li><a class="nav-link" href="../../../Grade 9 tutorial/citizen/units/Citizenship.html">Citizenship</a></li>
+                    <li><a class="nav-link" href="../../../Grade 9 tutorial/IT/units/informaton tech.html">IT</a></li>
+                    <li><a class="nav-link" href="../../../Grade 9 tutorial/hp/units/hp.html">HPE</a></li>
+                    <li><a class="nav-link" href="../../../Grade 9 tutorial/history/units/history.html">History</a></li>
+                   
+                  </ul>
+                </li>
+  
+                <li>
+                  <a class="nav-link" href="#submenu2_1_1" data-toggle="collapse" aria-expanded="false">
+                   <b> -Grade 10 >></b>
+                  </a>
+                  <ul class="collapse list-unstyled" id="submenu2_1_1">
+                    <li><a class="nav-link" href="../../../Grade 10 tutorial/Affan-oromo/units/affan oro.html">Affan-Oromo</a></li>
+                    <li><a class="nav-link" href="../../../Grade 10 tutorial/amharic/units/amharic g10.html">Amharic</a></li>
+                    <li><a class="nav-link" href="../../../Grade 10 tutorial/english/units/english g10.html">English</a></li>
+                    <li><a class="nav-link" href="../../../Grade 10 tutorial/maths/units/maths g10.html">Mathematics</a></li>
+                    <li><a class="nav-link" href="../../../Grade 10 tutorial/physics/units/physics g10.html">Physics</a></li>
+                    <li><a class="nav-link" href="../../../Grade 10 tutorial/chemistry/units/chemistry g10.html">Chemistry</a></li>
+                    <li><a class="nav-link" href="../../../Grade 10 tutorial/biology/units/biology g10.html">Biology</a></li>
+                    <li><a class="nav-link" href="../../../Grade 10 tutorial/eco/units/economics g10.html">Economics</a></li>
+                    <li><a class="nav-link" href="../../../Grade 10 tutorial/geo/units/geography g10.html">Geography</a></li>
+                    <li><a class="nav-link" href="../../../Grade 10 tutorial/citizenship/units/citizen.html">Citizenship</a></li>
+                    <li><a class="nav-link" href="../../../Grade 10 tutorial/IT/units/it g10.html">IT</a></li>
+                    <li><a class="nav-link" href="../../../Grade 10 tutorial/hp/units/hp g10 - Copy.html">HPE</a></li>
+                    <li><a class="nav-link" href="../../../Grade 10 tutorial/history/units/history g10.html">History</a></li>
+                   
+                  </ul>
+                </li>
+                <li>
+                  <a class="nav-link" href="#submenu2_1_2" data-toggle="collapse" aria-expanded="false">
+                   <b> -Grade 11 >></b>
+                  </a>
+                  <ul class="collapse list-unstyled" id="submenu2_1_2">
+                    <li><a class="nav-link" href="../../../Grade 11 tutorial/oro/units/oro g11.html">Affan-Oromo</a></li>
+                    
+                    <li><a class="nav-link" href="../../../Grade 11 tutorial/eng/units/eng g11.html">English</a></li>
+                    <li><a class="nav-link" href="../../../Grade 11 tutorial/maths/units/maths g11.html">Mathematics</a></li>
+                    <li><a class="nav-link" href="../../../Grade 11 tutorial/physics/units/physics g11.html">Physics</a></li>
+                    <li><a class="nav-link" href="../../../Grade 11 tutorial/chemi/units/chemistry g11.html">Chemistry</a></li>
+                    <li><a class="nav-link" href="../../../Grade 11 tutorial/Biology/units/biology g11.html">Biology</a></li>
+                    <li><a class="nav-link" href="../../../Grade 11 tutorial/eco/units/econo g11.html">Economics</a></li>
+                    <li><a class="nav-link" href="../../../Grade 11 tutorial/geo/units/geog g11.html">Geography</a></li>
+                    <li><a class="nav-link" href="../../../Grade 11 tutorial/citizen/units/citizen.html">Citizenship</a></li>
+                    <li><a class="nav-link" href="../../../Grade 11 tutorial/IT/units/it g11.html">IT</a></li>
+                    <li><a class="nav-link" href="../../../Grade 11 tutorial/hp/units/hp g11.html">HPE</a></li>
+                    <li><a class="nav-link" href="../../../Grade 11 tutorial/history/units/history g11.html">History</a></li>
+                   
+                  </ul>
+                </li>
+  
+                <li>
+                  <a class="nav-link" href="#submenu2_1_3" data-toggle="collapse" aria-expanded="false">
+                   <b> -Grade 12 >></b>
+                  </a>
+                  <ul class="collapse list-unstyled" id="submenu2_1_3">
+                    <li><a class="nav-link" href="tutorial/Grade 12 tutorial/oro/units/oro g12.html">Affan-Oromo</a></li>
+                    
+                    <li><a class="nav-link" href="../../../Grade 12 tutorial/eng/units/english g12.html">English</a></li>
+                    <li><a class="nav-link" href="../../../Grade 12 tutorial/maths/units/maths g12.html">Mathematics</a></li>
+                    <li><a class="nav-link" href="../../../Grade 12 tutorial/physics/units/physics g12.html">Physics</a></li>
+                    <li><a class="nav-link" href="../../../Grade 12 tutorial/chemi/units/chemi g12.html">Chemistry</a></li>
+                    <li><a class="nav-link" href="../../../Grade 12 tutorial/bio/units/biology g12.html">Biology</a></li>
+                    <li><a class="nav-link" href="../../../Grade 12 tutorial/eco/units/economics g12.html">Economics</a></li>
+                    <li><a class="nav-link" href="../../../Grade 12 tutorial/geo/units/geography g12.html">Geography</a></li>
+                    <li><a class="nav-link" href="../../../Grade 12 tutorial/citizen/units/citizen.html">Citizenship</a></li>
+                    <li><a class="nav-link" href="../../../Grade 12 tutorial/it/units/it g12.html">IT</a></li>
+                    <li><a class="nav-link" href="../../../Grade 12 tutorial/hp/units/hp g12.html">HPE</a></li>
+                    <li><a class="nav-link" href="../../../Grade 12 tutorial/histroy/units/history g12.html">History</a></li>
+                   
+                  </ul>
+                </li>
+  
+              </ul>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="#submenu3" data-toggle="collapse" aria-expanded="false">
+                <i class="fas fa-flask"></i> Virtual Labs
+              </a>
+              <ul class="collapse list-unstyled" id="submenu3">
+                
+                  <a href="../../../../VirtualLab/VLMaths.html" class="nav-link" href="#submenu3_1" data-toggle="" aria-expanded="false">
+                    Mathematics >>
+                  </a>
+                  
+                </li>
+  
+                <a href="../../../../VirtualLab/VLPhysics.html" class="nav-link" href="#submenu3_2" data-toggle="" aria-expanded="false">
+                  Physics >>
+                </a>
+               
+              </li>
+  
+              <a href="../../../../VirtualLab/VLChemistry.html" class="nav-link" href="#submenu3_3" data-toggle="" aria-expanded="false">
+                Chemistry >>
+              </a>
+              
+            </li>
+  
+            <a  href="../../../../VirtualLab/VLBiology.html" class="nav-link" href="#submenu3_4" data-toggle="" aria-expanded="false">
+              Biology >>
+            </a>
+            
+          </li>
+  
+          
+  
+  
+  
+              </ul>
+            </li>
+  
+  
+  
+            <li class="nav-item">
+              <a class="nav-link" href="#submenu4" data-toggle="collapse" aria-expanded="false">
+                <i class="fas fa-flask"></i> Basic-Skill
+              </a>
+              <ul class="collapse list-unstyled" id="submenu4">
+                
+  
+                  <a class="nav-link" href="#submenu4_1" data-toggle="collapse" aria-expanded="false">
+                    Computer-Skill >>
+                  </a>
+                  <ul class="collapse list-unstyled" id="submenu4_1">
+                    <li><a class="nav-link" href="../../../../Basic Skills/computer copy.html">-B.Computer Skill</a></li>
+                    <li><a class="nav-link" href="../../../../Basic Skills/computer copy 2.html">-Coding</a></li>
+                    <li><a class="nav-link" href="../../../../Basic Skills/computer copy 3.html">-Video Editing</a></li>
+                  </ul>
+                </li>
+  
+                <a class="nav-link" href="#submenu4_2" data-toggle="collapse" aria-expanded="false">
+                  English >>
+                </a>
+                <ul class="collapse list-unstyled" id="submenu4_2">
+                  <li><a class="nav-link" href="../../../../Basic Skills/english copy.html">-Grammer</a></li>
+                  <li><a class="nav-link" href="../../../../Basic Skills/english copy 2.html">-Vocabulary</a></li>
+                  <li><a class="nav-link" href="../../../../Basic Skills/english copy 3.html">-Spoken</a></li>
+                  <li><a class="nav-link" href="../../../../Basic Skills/english copy 4.html">-Writing</a></li>
+                  <li><a class="nav-link" href="../../../../Basic Skills/english copy 5.html">-Podcasting</a></li>
+                </ul>
+              </li>
+              <a class="nav-link" href="#submenu4_3" data-toggle="collapse" aria-expanded="false">
+                Affan-Oromo >>
+              </a>
+              <ul class="collapse list-unstyled" id="submenu4_3">
+                <li><a class="nav-link" href="../../../../Basic Skills/affan oromo copy.html">-Part 1</a></li>
+                <li><a class="nav-link" href="../../../../Basic Skills/affan oromo copy 2.html">-Part 2</a></li>
+                <li><a class="nav-link" href="../../../../Basic Skills/affan oromo copy 3.html">-Part 3</a></li>
+              </ul>
+            </li>
+  
+              <a class="nav-link" href="#submenu4_4" data-toggle="collapse" aria-expanded="false">
+                Self-Fulfilment >>
+              </a>
+              <ul class="collapse list-unstyled" id="submenu4_4">
+                <li><a class="nav-link" href="../../../../Basic Skills/self development copy.html">-Sport</a></li>
+                <li><a class="nav-link" href="../../../../Basic Skills/self development copy 2.html">-Darwing</a></li>
+                <li><a class="nav-link" href="../../../../Basic Skills/self development copy 3.html">-VideoBooks</a></li>
+              </ul>
+            </li>
+  
+                 
+  
+  
+  
+              </ul>
+            </li>
+  
+  
+  
+            <li class="nav-item">
+              <a class="nav-link" href="../../../../index.html">
+                <i class="fas fa-sign-out-alt"></i> Logout
+              </a>
+            </li>
+          </ul>
+        </div>
+  
+      </nav>
+
+
+
+    <main role="main" class="col-md-9 col-lg-10 px-md-4">
+      <div class="content">
+        <div class="cover-page">
+          <div class="cover-header">
+            <h1><u>Welcome to Our School E-Learning System </u></h1>
+            <h3>DILACHIN GENERAL SECONDARY SCHOOL</h3>
+            <!-- Add any other content for the cover page here -->
+          </div>
+        </div>
+        <div class="gallery">
+            <div class="gallery-item">
+               <a href="Unit (1).html" target="_blank"> <img src="../units/Slide1.PNG" alt="Image 1"></a>
+            </div>
+            <div class="gallery-item">
+              <a href="Unit (2).html"target="_blank" > <img src="../units/Slide2.PNG" alt="Image 2"></a>
+            </div>
+            <div class="gallery-item">
+              <a href="Unit (3).html" target="_blank"> <img src="../units/Slide3.PNG" alt="Image 3"></a>
+            </div>
+           
+            </div>
+        </div>
+      </div>
+    </main>
+    <!-- Styled toggle button -->
+    <button class="toggle-btn d-md-none" type="button" data-toggle="collapse" data-target=".sidebar">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+</div>
+<footer class="footer text-center bg-dark text-light py-3">
+    <div class="container">
+      <span>© 2024/2016EC dgss.e-learning</span>
+    </div>
+  </footer>
+  
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+  // JavaScript for night and light mode toggle
+  function toggleTheme() {
+    var theme = document.getElementById('theme');
+    if (theme.getAttribute('href') === 'light-theme.css') {
+      theme.setAttribute('href', 'dark-theme.css');
+    } else {
+      theme.setAttribute('href', 'light-theme.css');
+    }
+  }
+
+  // JavaScript for filtering accordion items
+  function filterAccordion() {
+    var input = document.getElementById('searchInput').value.toLowerCase();
+    var items = document.querySelectorAll('#accordion .nav-item');
+
+    items.forEach(function(item) {
+      var text = item.textContent.toLowerCase();
+      var collapse = item.querySelector('.collapse');
+      if (text.indexOf(input) !== -1) {
+        item.style.display = 'block';
+        if (collapse) {
+          collapse.classList.add('show');
+        }
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  }
+</script>
+
+  
+</body>
+</html>

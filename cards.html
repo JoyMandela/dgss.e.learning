@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="generator" content="RocketCake">
+	<title>DGSS-book9</title>
+	<link rel="stylesheet" type="text/css" href="g9_books_html.css">
+</head>
+<body>
+<div class="textstyle1">
+<div id="container_a88fb7f"><div id="container_a88fb7f_padding" ><div class="textstyle1">  <div id="text_15d4d079">
+    <div class="textstyle2">
+      </div>
+    <div class="textstyle1">
+<span class="textstyle3">DILACHIN GENERAL SECONDARY SCHOOL</span><span class="textstyle4"><br/>DGSS-Digital </span>      </div>
+    </div>
+  <span class="textstyle5"><br/></span>
+  <div id="text_60c5f54d">
+    <div class="textstyle2">
+      </div>
+    </div>
+</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Playlist Widget</title>
+    <style>
+        /* Style for the playlist widget container */
+        #playlist-widget {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+
+        /* Style for individual playlist items */
+        .playlist-item {
+            width: 300px; /* Adjust as needed */
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+body {
+            background-color: brown; /* Light gray background color */
+        }
+
+        .playlist-item h3 {
+            margin-top: 0;
+        }
+
+        .playlist-item iframe {
+            width: 100%;
+            height: 200px; /* Adjust as needed */
+        }
+
+    </style>
+</head>
+<body>
+    <div id="playlist-widget">
+        <!-- Video titles and players will be inserted here -->
+    </div>
+
+    <!-- Load the YouTube IFrame Player API -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+    <script>
+        // Replace 'YOUR_YOUTUBE_API_KEY' with your actual YouTube API key
+        const apiKey = 'AIzaSyBRrZ5DSxLZhrvBIko5ND7mJD14N55ROII';
+
+        // Replace 'YOUR_PLAYLIST_ID' with the ID of your YouTube playlist
+        const playlistId = 'PLhXdcrTaVuV_4mQ1CUNXMCraz4RuBUzpd';
+
+        // Function to fetch playlist data from YouTube API
+        function fetchPlaylist() {
+            fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=${playlistId}&key=${apiKey}`)
+                .then(response => response.json())
+                .then(data => {
+                    const playlistItems = data.items;
+                    playlistItems.forEach(item => {
+                        const videoId = item.snippet.resourceId.videoId;
+                        const videoTitle = item.snippet.title;
+                        const videoPlayer = `
+                            <div class="playlist-item">
+                                <h3>${videoTitle}</h3>
+                                <iframe src="https://www.youtube.com/embed/${videoId}" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        `;
+                        document.getElementById('playlist-widget').innerHTML += videoPlayer;
+                    });
+                })
+                .catch(error => console.error('Error fetching playlist:', error));
+        }
+
+        // Call the fetchPlaylist function when the page loads
+        window.onload = fetchPlaylist;
+    </script>
+
+
+<div style="clear:both"></div></div></div>  </div>
+<div class="textstyle2">
+<div id="container_2f88e634"><div id="container_2f88e634_padding" ><div class="textstyle1">  <span class="textstyle6">Grade 9 Student Text Books</span>
+</div>
+</div></div><span class="textstyle7"><br/><br/></span><div id="container_6183a16b"><div id="container_6183a16b_padding" ><div class="textstyle2"><div id="container_2f8bac54"><div id="container_2f8bac54_padding" ><div class="textstyle2"><img src="rc_images/slide_10.png" id="img_54e21063" alt="" title="" />
+</div>
+<div style="clear:both"></div></div></div><div id="container_1345c514"><div id="container_1345c514_padding" ><div class="textstyle2"><img src="rc_images/slide1.jpg" id="img_6dfb3e84" alt="" title="" />
+</div>
+<div style="clear:both"></div></div></div><div id="container_35b176d9"><div id="container_35b176d9_padding" ><div class="textstyle2"><img src="rc_images/slide2.jpg" id="img_6491e4cb" alt="" title="" />
+</div>
+<div style="clear:both"></div></div></div><div id="container_537ca46"><div id="container_537ca46_padding" ><div class="textstyle2"><img src="rc_images/slide3.jpg" id="img_777a3ca0" alt="" title="" />
+</div>
+<div style="clear:both"></div></div></div><div id="container_5e4ed946"><div id="container_5e4ed946_padding" ><div class="textstyle2"><img src="rc_images/slide4.jpg" id="img_527cd7ee" alt="" title="" />
+</div>
+<div style="clear:both"></div></div></div><div id="container_67682b71"><div id="container_67682b71_padding" ><div class="textstyle2"><img src="rc_images/slide5.jpg" id="img_2ca654cf" alt="" title="" />
+</div>
+<div style="clear:both"></div></div></div><div id="container_3716852e"><div id="container_3716852e_padding" ><div class="textstyle2"><div id="container_67ebdd00"><div id="container_67ebdd00_padding" ><div class="textstyle2"><img src="rc_images/slide6.png" id="img_7d2a762c" alt="" title="" />
+</div>
+<div style="clear:both"></div></div></div><div id="container_2d975726"><div id="container_2d975726_padding" ><div class="textstyle2"><img src="rc_images/slide8.jpg" id="img_1fef8e7" alt="" title="" />
+</div>
+<div style="clear:both"></div></div></div><div id="container_4493700"><div id="container_4493700_padding" ><div class="textstyle2"><img src="rc_images/slide9.jpg" id="img_44a636d6" alt="" title="" />
+</div>
+<div style="clear:both"></div></div></div><div id="container_5e3721c3"><div id="container_5e3721c3_padding" ><div class="textstyle2"><img src="rc_images/slide10.jpg" id="img_4974338" alt="" title="" />
+</div>
+<div style="clear:both"></div></div></div><div id="container_53d0d90c"><div id="container_53d0d90c_padding" ><div class="textstyle2"><img src="rc_images/slide11.jpg" id="img_3bae2c7b" alt="" title="" />
+</div>
+<div style="clear:both"></div></div></div><div id="container_2a3efc7a"><div id="container_2a3efc7a_padding" ><div class="textstyle2"><img src="rc_images/slide12.jpg" id="img_61be6478" alt="" title="" />
+</div>
+<div style="clear:both"></div></div></div></div>
+<div style="clear:both"></div></div></div></div>
+<div style="clear:both"></div></div></div><div id="container_4b99286f"><div id="container_4b99286f_padding" ><div class="textstyle1">  <span class="textstyle7">Copy right to DGSS 2024/2016EC</span>
+</div>
+</div></div>  </div>
+</body>
+</html>
+</body>
+</html>
